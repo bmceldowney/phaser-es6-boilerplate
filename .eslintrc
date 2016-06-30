@@ -1,8 +1,4 @@
 {
-  "extends": "standard",
-  "ecmaFeatures": {
-    "modules": true
-  },
   "env": {
     "browser": true,
     "mocha": true,

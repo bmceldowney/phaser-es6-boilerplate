@@ -5,6 +5,9 @@ export default class TextButton extends Phaser.Graphics {
     super(game, x, y);
     this.game.add.existing(this);
 
+    this.originalWidth = width;
+    this.originalHeight = height;
+
     this.lineStyle(2, 0x00dd00, 1);
     this.beginFill(0x000000, 1);
     this.drawRect(0, 0, width, height);
@@ -21,14 +24,14 @@ export default class TextButton extends Phaser.Graphics {
   _over (button) {
     button.lineStyle(2, 0x00dd00, 1);
     button.beginFill(0x009900, 1);
-    button.drawRect(button.graphicsData[0].shape.x, button.graphicsData[0].shape.y, button.graphicsData[0].shape.width, button.graphicsData[0].shape.height);
+    button.drawRect(0, 0, this.originalWidth, this.originalHeight);
     button.text.fill = '#000';
   }
 
   _out (button) {
     button.lineStyle(2, 0x00dd00, 1);
     button.beginFill(0x00000, 1);
-    button.drawRect(button.graphicsData[0].shape.x, button.graphicsData[0].shape.y, button.graphicsData[0].shape.width, button.graphicsData[0].shape.height);
+    button.drawRect(0, 0, this.originalWidth, this.originalHeight);
     button.text.fill = '#0d0';
   }
 }

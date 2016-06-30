@@ -1,0 +1,69 @@
+[
+  {
+    "name": "The bones",
+    "entries": [
+      {
+        "text": "Whilst patrolling, ${unitName} stumbles across a badly deteriorated set of bones.",
+        "options": [
+          {
+            "text": "Investigate",
+            "action": 1
+          },
+          {
+            "text": "Ignore them"
+          }
+        ]
+      },
+      {
+        "text": "Upon further investigation it appears the bones have been intricately carved with infernal symbology.",
+        "options": [
+          {
+            "text": "Have ${unitName} secure them for further study",
+            "state": {
+              "cursedBones": true
+            },
+            "action": 2
+          },
+          {
+            "text": "Have ${unitName} cleanse the bones with holy fire",
+            "state": {
+              "blessing": true
+            },
+            "action": 3
+          },
+          {
+            "text": "Leave them, this is an ill omen",
+            "state": {
+              "cursedSkeletonArmy": true
+            },
+            "action": 4
+          }
+        ]
+      },
+      {
+        "text": "${unitName}: \"This seems like a bad idea, but you're the boss.\"",
+        "options": [
+          {
+            "text": "okay"
+          }
+        ]
+      },
+      {
+        "text": "${unitName}: \"The world will be much better without these in it.\"",
+        "options": [
+          {
+            "text": "okay"
+          }
+        ]
+      },
+      {
+        "text": "${unitName}: \"The sooner I'm away from these foul things the better.\"",
+        "options": [
+          {
+            "text": "okay"
+          }
+        ]
+      }
+    ]
+  }
+]

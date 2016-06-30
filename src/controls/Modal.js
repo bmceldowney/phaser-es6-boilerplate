@@ -1,5 +1,12 @@
 import TextButton from './TextButton';
-import style from '../services/style';
+
+const textStyle = {
+  font: '14px NewWiz',
+  fill: '#00dd00',
+  align: 'left',
+  wordWrap: true,
+  wordWrapWidth: 0
+}
 
 export default class Modal {
   constructor (game, defaults) {
@@ -54,7 +61,7 @@ export default class Modal {
           y: y + height - padding - buttonHeight,
           width: buttonWidth,
           height: buttonHeight,
-          textStyle: style.text()
+          textStyle: textStyle
         });
 
         this.buttons.push(textButton);
@@ -93,7 +100,7 @@ export default class Modal {
     this.graphics.drawRect(0, 0, this.game.width, this.game.height);
     this.graphics.lineStyle(3, 0x00dd00, 1);
 
-    this.gameText = this.game.add.text(0, 0, '', style.text());
+    this.gameText = this.game.add.text(0, 0, '', textStyle);
 
     this.group.add(this.clickEater);
     this.group.add(this.graphics);
